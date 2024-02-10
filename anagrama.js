@@ -6,7 +6,18 @@
  * - NO hace falta comprobar que ambas palabras existan.
  * - Dos palabras exactamente iguales no son anagrama.
  */
-function anagrama(string) {
-  return string.split("").reverse().join("");
+
+function esAnagrama(string1, string2) {
+  if (string1.toLowerCase() == string2.toLowerCase()) {
+    return false;
+  } else if (
+    string1.toLowerCase().split("").sort().join("") ===
+    string2.toLowerCase().split("").sort().join("")
+  ) {
+    return true;
+  }
 }
-console.log(anagrama("Sofia"));
+let resultadoConfirmatorio1 = esAnagrama("Amor", "Roma");
+let resultadoConfirmatorio2 = esAnagrama("lacteo", "coleta");
+let resultadoNegativo1 = esAnagrama("Hola", "Chau");
+let resultadoNegativo2 = esAnagrama("Que onda", "Hola");
