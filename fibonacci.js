@@ -5,15 +5,22 @@
  *   la que el siguiente siempre es la suma de los dos anteriores.
  *   0, 1, 1, 2, 3, 5, 8, 13...
  */
-function sucesión_de_fibonacci() {
-  for (let i = 0; i <= 50; i++) {
-    console.log([i - 1] + [i - 2]);
-  }
+// // 3 Imprimir la sucesión fibonacci hasta 50
 
-  // let n = 0;
-  // do {
-  //   n++;
-  //   console.log(n + (n - 1));
-  // } while (n < 50);
+function fibonacci() {
+  let a = 0,
+    b = 1,
+    c,
+    s = 1;
+  console.log(a);
+  console.log(b);
+  for (i = 3; i <= 50; i++) {
+    c = a + b;
+    console.log(c);
+    s = s + c;
+    a = b;
+    b = c;
+  }
 }
-console.log(sucesión_de_fibonacci());
+
+console.log(fibonacci());
